@@ -1,10 +1,16 @@
 import React from "react";
+
+import { RouterProvider } from "react-router";
+import { Toaster } from "./components/ui/sonner";
+import { router } from "./routes";
+
 import "./global.css";
 
 export const App = () => {
   return (
-    <div className="min-h-screen bg-amber-400">
-      <h1 className="font-semibold">App</h1>
-    </div>
+    <>
+      <RouterProvider router={router} />
+      <Toaster richColors />
+    </>
   );
 };
