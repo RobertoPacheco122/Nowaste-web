@@ -2,9 +2,9 @@ import { createBrowserRouter } from "react-router";
 import { SignIn } from "./pages/auth/sign-in";
 import { AuthLayout } from "./pages/_layout/auth";
 import { SignUp } from "./pages/auth/sign-up";
-import { ChartColumnIncreasing } from "lucide-react";
 import { AppLayout } from "./pages/_layout/app";
-import { Dashboard } from "./pages/app/Dashboard";
+import { Dashboard } from "./pages/app/dashboard";
+import { Products } from "./pages/app/products";
 
 export const authRoutes = [
   {
@@ -26,10 +26,18 @@ export const authRoutes = [
 export const applicationRoutes = [
   {
     name: "Dashboard",
-    icon: ChartColumnIncreasing,
+    icon: null,
     route: {
       path: "/",
       element: <Dashboard />,
+    },
+  },
+  {
+    name: "Produtos",
+    icon: null,
+    route: {
+      path: "/products",
+      element: <Products />,
     },
   },
 ];
@@ -53,4 +61,5 @@ export const router = createBrowserRouter([
 
 export const applicationRoutesNamesMap: Record<string, string> = {
   "/": "Dashboard",
+  "/products": "Produtos",
 };
